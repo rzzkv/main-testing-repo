@@ -1,0 +1,55 @@
+
+1. Test Case ID: A unique identifier for the test case.
+2. Test Case Name: A descriptive name for the test case.
+3. Test Case Description: A brief description of the test case.
+4. Test Steps: The steps to be followed to execute the test case.
+5. Test Data: The input data values that are entered into the system.
+6. Preconditions: The conditions that must be met before the test case can be executed.
+7. Expected Results: The results that are expected throughout test case execution.
+8. Post-conditions: The conditions that must be met after the test case has been executed.
+
+To create a test case example for an automation tester, you can follow these steps:
+
+1. Identify the test objective: Determine what specific functionality or feature you want to test.
+2. Define the test scenario: Describe the specific circumstance or environment in which the test will be conducted.
+3. List the preconditions: Identify any necessary conditions or setup required before executing the test.
+4. Outline the test steps: Clearly define the steps that need to be executed to perform the test.
+5. Specify the expected results: Describe the expected outcome or behavior of the system after the test is executed.
+6. Include any additional information: Provide any additional details or information that may be relevant to the test case.
+
+Here is an example of a test case for an automation tester:
+
+1. Test Objective: Verify that the login functionality of the application works correctly.
+2. Test Scenario: User attempts to log in with valid credentials.
+3. Preconditions:
+The application is installed and running.
+The user has a valid username and password.
+Test Steps:
+Launch the application.
+Navigate to the login page.
+Enter the valid username and password.
+Click on the "Login" button.
+Wait for the system to process the login request.
+Verify that the user is successfully logged in and redirected to the home page.
+4. Expected Results:
+The login process should be successful.
+The user should be redirected to the home page.
+The user's name or profile information should be displayed on the home page.
+
+1) Заголовок
+Адрес https://selenide.org должен быть в выдаче гугла по запросу 'Selenide'
+
+2) Критичность
+BLOCKER
+
+3) (optional) Предусловия
+Открыт браузер с главной страницей google.com
+
+4) Шаги
+- Ввести 'Selenide' в поисковую строку
+- Нажать кнопку "Search"
+
+5) Ожидаемый результат
+- Адрес https://selenide.org должен быть в выдаче гугла
+
+
