@@ -52,7 +52,7 @@ public class StepsTest {
     }
 }
 
-/* Below two identical steps
+/* Below two identical steps with and without lambda
 
     step("Открываем главную страницу", new Allure .ThrowableContextRunnableVoid() {
         @Override
@@ -60,7 +60,6 @@ public class StepsTest {
             open("https://github.com");
         }
     });
-
 
 step("Открываем главную страницу", () -> {
             open("https://github.com");
