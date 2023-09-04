@@ -5,6 +5,7 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.sleep;
@@ -13,7 +14,7 @@ public class RegistrationFormWithTestPage extends TestBase {
 
     @Owner("rzzkv")
     @Severity(SeverityLevel.BLOCKER)
-    @Tag("demoqa")
+    @Tags({@Tag("BLOCKER"), @Tag("demoqa")})
     @DisplayName("The check for the possibility of registering a new user.")
     @Test
     void fillFormTest() {
