@@ -25,7 +25,6 @@ public class RegistrationFormWithStepsAndRegistrationFormWithStepsAndTestPage ex
 
         step("Fulfill fields with data", () -> {
             registrationPage
-                    .openPage()
                     .setFirstName(data.firstName)
                     .setLastName(data.lastName)
                     .setEmail(data.userEmail)
