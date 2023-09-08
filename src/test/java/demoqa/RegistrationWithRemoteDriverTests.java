@@ -8,8 +8,6 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
-import static io.qameta.allure.Allure.step;
-
 public class RegistrationWithRemoteDriverTests extends TestBaseRemote {
 
     @Owner("rzzkv")
@@ -19,34 +17,25 @@ public class RegistrationWithRemoteDriverTests extends TestBaseRemote {
     @Test
     void fillFormTest() {
 
-        step("Open registration Page", () -> {
-            registrationPage.openPage();
-        });
+        registrationPage
+                .openPage()
+                .setFirstName(data.firstName)
+                .setLastName(data.lastName)
+                .setEmail(data.userEmail)
+                .setGender()
+                .setNumber(data.userNumber)
+                .setDateOfBirth()
+                .uploadPicture(data.picture)
+                .setAddress(data.currentAddress)
+                .setSubject(data.subject)
+                .setHobbies(data.hobbies)
+                .submit();
 
-        step("Fulfill fields with data", () -> {
-            registrationPage
-                    .setFirstName(data.firstName)
-                    .setLastName(data.lastName)
-                    .setEmail(data.userEmail)
-                    .setGender()
-                    .setNumber(data.userNumber)
-                    .setDateOfBirth()
-                    .uploadPicture(data.picture)
-                    .setAddress(data.currentAddress)
-                    .setSubject(data.subject)
-                    .setHobbies(data.hobbies);
-        });
+        registrationPage.verifyResultsModalAppears()
+                .verifyResult("Student Name", data.firstName + " " + data.lastName)
+                .verifyResult("Student Email", data.userEmail)
+                .verifyResult("Mobile", data.userNumber)
+                .verifyResult("Date of Birth", "16 April,2000");
 
-        step("Submit", () -> {
-            registrationPage.submit();
-        });
-
-        step("Verify Results", () -> {
-            registrationPage.verifyResultsModalAppears()
-                    .verifyResult("Student Name", data.firstName + " " + data.lastName)
-                    .verifyResult("Student Email", data.userEmail)
-                    .verifyResult("Mobile", data.userNumber)
-                    .verifyResult("Date of Birth", "16 April,2000");
-        });
     }
 }
