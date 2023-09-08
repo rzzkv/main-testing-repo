@@ -4,19 +4,17 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import demoqa.helpers.Attach;
 import demoqa.pages.RegistrationPage;
-import demoqa.pages.TextBoxPage;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-import java.util.Map;
 
 public class TestBaseRemote {
 
     RegistrationPage registrationPage = new RegistrationPage();
-    TextBoxPage textBoxPage = new TextBoxPage();
+//    TextBoxPage textBoxPage = new TextBoxPage();
     TestData data = new TestData();
 
     @BeforeAll
